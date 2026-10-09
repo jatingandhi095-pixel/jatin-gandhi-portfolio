@@ -1,6 +1,5 @@
-import { Body, SectionHeading, SmallLabel } from "@/components/typography";
+import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
-import { PageHeader } from "@/components/page-header";
 import { CaseStudyHero } from "@/components/case-study-hero";
 import { RichText, MetaLabel } from "@/components/content";
 

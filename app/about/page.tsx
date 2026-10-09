@@ -1,4 +1,4 @@
-import { Body, SectionHeading, SmallLabel } from "@/components/typography";
+import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
 import { PageHeader } from "@/components/page-header";
 
@@ -21,8 +21,8 @@ export default function AboutPage() {
             <SmallLabel>Approach</SmallLabel>
             <SectionHeading>Thoughtful design grows from observation, empathy, and context.</SectionHeading>
             <Body>
-              My work is grounded in research, strategic thinking, and editorial visual language.
-              I care about how a product feels in the hands of real people — especially during the
+              My work is grounded in research, strategic thinking, and editorial visual language. I
+              care about how a product feels in the hands of real people — especially during the
               moments where trust, emotion, and uncertainty are most present.
             </Body>
           </div>

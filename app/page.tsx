@@ -29,7 +29,7 @@ const featuredWork = [
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 export default function HomePage() {
@@ -62,7 +62,7 @@ export default function HomePage() {
 
       <Section>
         <Container>
-          <div className="section-headline">
+          <div className="section-headline stack-lg">
             <SmallLabel>Selected work</SmallLabel>
             <SectionHeading>Thoughtful product design for complex human moments.</SectionHeading>
           </div>
@@ -74,7 +74,7 @@ export default function HomePage() {
                 className="feature-card"
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.55 }}
               >
                 <div className="card-image" aria-hidden="true" />
