@@ -6,8 +6,8 @@
   --color-accent: #d6b660;
   --color-line: rgba(23, 20, 17, 0.12);
   --color-soft: rgba(23, 20, 17, 0.04);
-  --font-display: var(--font-display), Georgia, serif;
-  --font-body: var(--font-body), "Segoe UI", sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
 }
 
 * {
