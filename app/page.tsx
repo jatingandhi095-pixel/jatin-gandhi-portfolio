@@ -1,15 +1,35 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
-import { PortfolioCard } from "@/components/portfolio-card";
-import { featuredWork } from "@/data/portfolio";
+import { motion } from "framer-motion";
+
+const featuredWork = [
+  {
+    title: "Beside",
+    category: "Service ecosystem",
+    summary:
+      "A care-centered mobility platform that brings clarity to a fragile, emotional customer journey.",
+    href: "/work/beside-case-study",
+  },
+  {
+    title: "Used Car",
+    category: "Retail experience",
+    summary:
+      "A more transparent way to buy a used car by reducing uncertainty and restoring trust.",
+    href: "/work/used-car",
+  },
+  {
+    title: "Shaolin Temple",
+    category: "Cultural digital experience",
+    summary:
+      "A regenerative storytelling experience that invites people to engage with heritage in a contemporary way.",
+    href: "/work/shaolin-temple",
+  },
+];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
 };
 
 export default function HomePage() {
@@ -17,12 +37,7 @@ export default function HomePage() {
     <main>
       <Section className="hero-section">
         <Container>
-          <motion.div
-            className="hero-copy"
-            initial="hidden"
-            animate="show"
-            variants={fadeUp}
-          >
+          <motion.div className="hero-copy" initial="hidden" animate="show" variants={fadeUp}>
             <Eyebrow>Product designer / researcher / storyteller</Eyebrow>
             <Display>
               Designing calmer,
@@ -54,20 +69,22 @@ export default function HomePage() {
 
           <div className="feature-grid">
             {featuredWork.map((item) => (
-              <motion.div
+              <motion.article
                 key={item.title}
+                className="feature-card"
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.55 }}
               >
-                <PortfolioCard
-                  eyebrow={item.category}
-                  title={item.title}
-                  summary={item.summary}
-                  href={item.href}
-                />
-              </motion.div>
+                <div className="card-image" aria-hidden="true" />
+                <div className="card-copy">
+                  <SmallLabel>{item.category}</SmallLabel>
+                  <h3>{item.title}</h3>
+                  <p>{item.summary}</p>
+                  <Link href={item.href}>Read case study →</Link>
+                </div>
+              </motion.article>
             ))}
           </div>
         </Container>
