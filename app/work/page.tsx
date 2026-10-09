@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Body, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
 import { PageHeader } from "@/components/page-header";
+import { PortfolioCard } from "@/components/portfolio-card";
 import { caseStudies } from "@/data/portfolio";
 
 export default function WorkPage() {

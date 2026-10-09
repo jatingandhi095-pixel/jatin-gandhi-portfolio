@@ -1,12 +1,57 @@
-.page-header {
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+.portfolio-card__image {
+  height: 300px;
+  background: linear-gradient(135deg, var(--color-soft), rgba(214, 182, 96, 0.2));
+  border-bottom: 1px solid var(--color-line);
+}
+
+.portfolio-card__content {
+  padding: 1.4rem 1.2rem 1.5rem;
+}
+
+.portfolio-card__content h3,
+.mini-card h3,
+.contact-card h3 {
+  margin: 0.3rem 0 0.8rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.portfolio-card__content p,
+.mini-card p,
+.contact-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.portfolio-card__meta {
+  margin-top: 1rem;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-study-hero {
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
-.page-header .display {
+.case-study-hero .display {
   max-width: 780px;
 }
 
-.page-header .body-copy {
+.case-study-hero .body-copy {
   margin-top: 1rem;
 }
 

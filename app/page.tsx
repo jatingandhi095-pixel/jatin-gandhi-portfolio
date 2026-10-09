@@ -1,9 +1,11 @@
-import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
-import { Container, Section } from "@/components/layout";
-import { PageHeader } from "@/components/page-header";
-import { featuredWork } from "@/data/portfolio";
+"use client";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
+import { Container, Section } from "@/components/layout";
+import { PortfolioCard } from "@/components/portfolio-card";
+import { featuredWork } from "@/data/portfolio";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -52,22 +54,20 @@ export default function HomePage() {
 
           <div className="feature-grid">
             {featuredWork.map((item) => (
-              <motion.article
+              <motion.div
                 key={item.title}
-                className="feature-card"
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="card-image" aria-hidden="true" />
-                <div className="card-copy">
-                  <SmallLabel>{item.category}</SmallLabel>
-                  <h3>{item.title}</h3>
-                  <p>{item.summary}</p>
-                  <Link href={item.href}>Read case study →</Link>
-                </div>
-              </motion.article>
+                <PortfolioCard
+                  eyebrow={item.category}
+                  title={item.title}
+                  summary={item.summary}
+                  href={item.href}
+                />
+              </motion.div>
             ))}
           </div>
         </Container>
