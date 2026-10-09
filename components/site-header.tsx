@@ -1,14 +1,7 @@
 import Link from "next/link";
+import { navItems } from "@/data/portfolio";
 
 export function SiteHeader() {
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/work", label: "Work" },
-    { href: "/experiments", label: "Experiments" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
-
   return (
     <header className="site-header">
       <div className="container header-inner">

@@ -1,39 +1,9 @@
-"use client";
-
+import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
+import { Container, Section } from "@/components/layout";
+import { PageHeader } from "@/components/page-header";
+import { featuredWork } from "@/data/portfolio";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  Body,
-  Display,
-  Eyebrow,
-  SectionHeading,
-  SmallLabel,
-} from "@/components/typography";
-import { Container, Section } from "@/components/layout";
-
-const featuredWork = [
-  {
-    title: "Beside",
-    category: "Service ecosystem",
-    summary:
-      "A care-centered mobility platform that brings clarity to a fragile, emotional customer journey.",
-    href: "/work/beside-case-study",
-  },
-  {
-    title: "Used Car",
-    category: "Retail experience",
-    summary:
-      "A more transparent way to buy a used car by reducing uncertainty and restoring trust.",
-    href: "/work/used-car",
-  },
-  {
-    title: "Shaolin Temple",
-    category: "Cultural digital experience",
-    summary:
-      "A regenerative storytelling experience that invites people to engage with heritage in a contemporary way.",
-    href: "/work/shaolin-temple",
-  },
-];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },

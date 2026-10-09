@@ -1,18 +1,17 @@
-import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
+import { Body, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
+import { PageHeader } from "@/components/page-header";
 
 export default function AboutPage() {
   return (
     <main>
       <Section className="page-hero">
         <Container>
-          <Eyebrow>About</Eyebrow>
-          <Display>Designing with care, clarity, and detail.</Display>
-          <Body>
-            I am Jatin Gandhi, a young product designer focused on creating meaningful systems,
-            experiences, and narratives that feel considered from the first glance to the final
-            interaction.
-          </Body>
+          <PageHeader
+            eyebrow="About"
+            title="Designing with care, clarity, and detail."
+            description="I am Jatin Gandhi, a young product designer focused on creating meaningful systems, experiences, and narratives that feel considered from the first glance to the final interaction."
+          />
         </Container>
       </Section>
 

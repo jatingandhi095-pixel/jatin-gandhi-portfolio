@@ -1,18 +1,18 @@
 import Link from "next/link";
-import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
+import { Body, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
+import { PageHeader } from "@/components/page-header";
 
 export default function ContactPage() {
   return (
     <main>
       <Section className="page-hero">
         <Container>
-          <Eyebrow>Contact</Eyebrow>
-          <Display>Let’s build something thoughtful.</Display>
-          <Body>
-            I’m open to product design roles, collaborations, and conversations around meaningful,
-            human-centered digital experiences.
-          </Body>
+          <PageHeader
+            eyebrow="Contact"
+            title="Let’s build something thoughtful."
+            description="I’m open to product design roles, collaborations, and conversations around meaningful, human-centered digital experiences."
+          />
         </Container>
       </Section>
 

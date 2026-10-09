@@ -1,38 +1,31 @@
-import { Body, Display, Eyebrow, SectionHeading, SmallLabel } from "@/components/typography";
+import { Body, SectionHeading, SmallLabel } from "@/components/typography";
 import { Container, Section } from "@/components/layout";
+import { PageHeader } from "@/components/page-header";
+import { experimentEntries } from "@/data/portfolio";
 
 export default function ExperimentsPage() {
   return (
     <main>
       <Section className="page-hero">
         <Container>
-          <Eyebrow>Experiments</Eyebrow>
-          <Display>Curiosity in motion.</Display>
-          <Body>
-            A place for sketches, prototypes, observations, and exploratory work that does not yet
-            belong in a case-study format.
-          </Body>
+          <PageHeader
+            eyebrow="Experiments"
+            title="Curiosity in motion."
+            description="A place for sketches, prototypes, observations, and exploratory work that does not yet belong in a case-study format."
+          />
         </Container>
       </Section>
 
       <Section>
         <Container>
           <div className="mini-grid single-column">
-            <div className="mini-card">
-              <SmallLabel>01</SmallLabel>
-              <h3>Interaction studies</h3>
-              <p>Testing pacing, gestures, and micro-confirmation moments in interfaces.</p>
-            </div>
-            <div className="mini-card">
-              <SmallLabel>02</SmallLabel>
-              <h3>Typographic explorations</h3>
-              <p>Exploring editorial rhythm, hierarchy, and expressive voice within digital systems.</p>
-            </div>
-            <div className="mini-card">
-              <SmallLabel>03</SmallLabel>
-              <h3>Material experiments</h3>
-              <p>Probing tactile references, textures, and sensorial language for digital products.</p>
-            </div>
+            {experimentEntries.map((entry) => (
+              <div key={entry.number} className="mini-card">
+                <SmallLabel>{entry.number}</SmallLabel>
+                <h3>{entry.title}</h3>
+                <p>{entry.description}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </Section>
