@@ -51,20 +51,34 @@ export default function PrototypeIntoTheUnknownPage() {
         </header>
 
         <section className={styles.hero}>
-          <div className={styles.eyebrow}>Product / UI / UX designer</div>
-          <h1 className={styles.title}>Jatin Gandhi</h1>
-          <p className={styles.intro}>
-            I design thoughtful digital experiences that help people navigate complex decisions with
-            more clarity, more confidence, and a stronger sense of trust.
-          </p>
-          <div className={styles.actions}>
-            <Link href="#work" className={styles.primaryAction}>
-              View work
-            </Link>
-            <Link href="#about" className={styles.secondaryAction}>
-              About me
-            </Link>
+          <div className={styles.heroGrid}>
+            <div>
+              <p className={styles.eyebrow}>Product / UI / UX designer</p>
+              <h1 className={styles.title}>Jatin Gandhi</h1>
+              <p className={styles.intro}>
+                I design thoughtful digital experiences that help people navigate complex decisions with
+                more clarity, more confidence, and a stronger sense of trust.
+              </p>
+              <div className={styles.actions}>
+                <Link href="#work" className={styles.primaryAction}>
+                  View work
+                </Link>
+                <Link href="#about" className={styles.secondaryAction}>
+                  About me
+                </Link>
+              </div>
+            </div>
+
+            <aside className={styles.heroPanel} aria-label="Design focus">
+              <p>Focus</p>
+              <ul>
+                <li>Human-centered product design</li>
+                <li>Research-led interaction</li>
+                <li>Editorial systems and storytelling</li>
+              </ul>
+            </aside>
           </div>
+
           <div className={styles.metaRow}>
             <span>Designing for clarity</span>
             <span>Research-led systems</span>
